@@ -7,3 +7,4 @@ react
 react-route
 redux
 react-hot-loader
+

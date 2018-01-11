@@ -1,0 +1,38 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, minimal-ui">
+    <meta name="format-detection" content="telephone=no">
+    <title>react</title>
+    <script type="text/javascript" src="http://mockjs.com/bower_components/mockjs/dist/mock.js"></script>
+</head>
+<body>
+
+
+<div id="clientName" data-client-name=""></div>
+<div id="accessToken" data-access-token=""></div>
+<div id="endpoint" data-endpoint=""></div>
+<div id="attachmentMaxSize" data-attachment-max-size=""></div>
+<div id="questionnaire" data-questionnaire="eyJxdWVzdGlvbm5haXJlSWQiOiJBQklMSUZZUVVFU1RJT05TRVRGT1JQUklPUkFVVEhDT1ZFUkFHRSIsInRpdGxlIjoiUEJNQjogZVBBIGZvciBBYmlsaWZ5IiwiZGVzY3JpcHRpb24iOiJRdWFudGl0eSBsaW1pdCBjbGFyaWZpY2F0aW9ucy4iLCJxdWVzdGlvbnMiOlt7InF1ZXN0aW9uSWQiOiJRUzMiLCJzZXF1ZW5jZU51bWJlciI6IjMiLCJxdWVzdGlvblRleHQiOiJEYXRlIFF1ZXN0aW9uPyIsInF1ZXN0aW9uVHlwZSI6eyJkYXRlIjp7ImFuc3dlciI6IjIwMTgtMDEtMjRUMTA6NTI6NDdaIiwiZGF0ZVRpbWVSZXF1aXJlZCI6dHJ1ZX19fSx7InF1ZXN0aW9uSWQiOiJRUzEiLCJzZXF1ZW5jZU51bWJlciI6IjEiLCJxdWVzdGlvblRleHQiOiJTaW5nbGUgU2VsZWN0IFF1ZXN0aW9uPyIsInF1ZXN0aW9uVHlwZSI6eyJzZWxlY3QiOnsic2VsZWN0TXVsdGlwbGUiOmZhbHNlLCJjaG9pY2VzIjpbeyJjaG9pY2VJZCI6IlFTMUNIMSIsInNlcXVlbmNlTnVtYmVyIjoiMSIsImNob2ljZVRleHQiOiJZRVMifSx7ImNob2ljZUlkIjoiUVMxQ0gyIiwic2VxdWVuY2VOdW1iZXIiOiIyIiwiY2hvaWNlVGV4dCI6Ik5PIn1dLCJhbnN3ZXIiOiJRUzFDSDIifX19LHsicXVlc3Rpb25JZCI6IlFTNCIsInNlcXVlbmNlTnVtYmVyIjoiNCIsInF1ZXN0aW9uVGV4dCI6Ik51bWVyaWMgUXVlc3Rpb24/IiwicXVlc3Rpb25UeXBlIjp7Im51bWVyaWMiOnsibnVtZXJpYyI6dHJ1ZX19fSx7InF1ZXN0aW9uSWQiOiJRUzUiLCJzZXF1ZW5jZU51bWJlciI6IjUiLCJxdWVzdGlvblRleHQiOiJGcmVlVGV4dCBRdWVzdGlvbj8iLCJxdWVzdGlvblR5cGUiOnsiZnJlZVRleHQiOnsiYW5zd2VyIjoiVGVzdCBBbnN3ZXIiLCJmcmVlVGV4dCI6dHJ1ZX19fSx7InF1ZXN0aW9uSWQiOiJRUzIiLCJzZXF1ZW5jZU51bWJlciI6IjIiLCJxdWVzdGlvblRleHQiOiJNdWx0aXBsZSBTZWxlY3QgUXVlc3Rpb24/IiwicXVlc3Rpb25UeXBlIjp7InNlbGVjdCI6eyJzZWxlY3RNdWx0aXBsZSI6dHJ1ZSwiY2hvaWNlcyI6W3siY2hvaWNlSWQiOiJRUzJDSDEiLCJzZXF1ZW5jZU51bWJlciI6IjEiLCJjaG9pY2VUZXh0IjoiRHJ1ZyBBIn0seyJjaG9pY2VJZCI6IlFTMkNIMiIsInNlcXVlbmNlTnVtYmVyIjoiMiIsImNob2ljZVRleHQiOiJEcnVnIEIifSx7ImNob2ljZUlkIjoiUVMyQ0gzIiwic2VxdWVuY2VOdW1iZXIiOiIzIiwiY2hvaWNlVGV4dCI6IkRydWcgQyJ9XSwiYW5zd2VyIjoiUVMyQ0gyLFFTMkNIMyJ9fX1dLCJhdHRhY2htZW50IjoiQmFzZTY0IGVuY29kZWQgZGF0YSJ9"></div>
+<div id="app">
+</div>
+<script>
+    var Random = Mock.Random;
+    var data = Mock.mock({
+        'list|1': [{
+            'accessToken|10-10': /[a-z][A-Z][0-9]/,
+            'endpoint': 'http://localhost:8080',
+            'clientName' :'@name',
+            'attachmentMaxSize': /^1[385][1-9]\d{8}/
+        }]
+    });
+    console.log(JSON.stringify(data, null, 4));
+    document.getElementById("clientName").setAttribute("data-client-name", data.list.clientName);
+    document.getElementById("accessToken").setAttribute("data-access-token", data.list.accessToken);
+    document.getElementById("endpoint").setAttribute("data-endpoint", data.list.endpoint);
+    document.getElementById("attachmentMaxSize").setAttribute("data-attachment-max-size", data.list.attachmentMaxSize);
+</script>
+
+</body>
+</html>
