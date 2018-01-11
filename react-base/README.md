@@ -1,6 +1,6 @@
 # react-base
 
-紀錄新專案使用React的整合過程
+為了公司專案搭造的初期基本框架
 
 
 ## skills
