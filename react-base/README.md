@@ -8,3 +8,9 @@ react-route
 redux
 react-hot-loader
 
+
+npm install
+npm run dev-build
+npm run dev-start
+
+
